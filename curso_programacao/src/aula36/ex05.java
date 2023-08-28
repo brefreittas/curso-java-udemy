@@ -9,19 +9,25 @@ public class ex05 {
 
         int code = sc.nextInt();
         int qtd = sc.nextInt();
-        double total;
+        double total = switch (code) {
+            case 1 -> total = 4.0 * qtd;
+            case 2 -> total = 4.5 * qtd;
+            case 3 -> total = 5.0 * qtd;
+            case 4 -> total = 2.0 * qtd;
+            default -> total = 1.5 * qtd;
+        };
 
-        if (code == 1) {
-            total = 4.0 * qtd;
-        } else if (code == 2) {
-            total = 4.50 * qtd;
-        } else if (code == 3)  {
-            total = 5.0 * qtd;
-        } else if (code == 4) {
-            total = 2.0 * qtd;
-        } else {
-            total = 1.5 * qtd;
-        }
+        //if (code == 1) {
+          //  total = 4.0 * qtd;
+        //} else if (code == 2) {
+          //  total = 4.50 * qtd;
+        //} else if (code == 3)  {
+          //  total = 5.0 * qtd;
+        //} else if (code == 4) {
+          //  total = 2.0 * qtd;
+        //} else {
+          //  total = 1.5 * qtd;
+        //}
 
 
         System.out.printf("Total: R$%.2f", total);
